@@ -4,14 +4,15 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{66DDA549-5571-44CF-8966-3F86FB9629B7}</ProjectGuid>
+    <ProjectGuid>{DBB32899-BE47-462B-8E67-04A19F5B8DBB}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>View</RootNamespace>
-    <AssemblyName>View</AssemblyName>
-    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <RootNamespace>Views</RootNamespace>
+    <AssemblyName>Views</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -46,6 +47,42 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CadastrarCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CadastrarCliente.Designer.cs">
+      <DependentUpon>CadastrarCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CadastrarQuarto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CadastrarQuarto.Designer.cs">
+      <DependentUpon>CadastrarQuarto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GerenciarCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GerenciarCliente.Designer.cs">
+      <DependentUpon>GerenciarCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GerenciarCurso.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GerenciarCurso.Designer.cs">
+      <DependentUpon>GerenciarCurso.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConsultarCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConsultarCliente.Designer.cs">
+      <DependentUpon>ConsultarCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConsultarQuarto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConsultarQuarto.Designer.cs">
+      <DependentUpon>ConsultarQuarto.cs</DependentUpon>
+    </Compile>
     <Compile Include="TelaPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -54,8 +91,23 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="TelaPrincipal.resx">
-      <DependentUpon>TelaPrincipal.cs</DependentUpon>
+    <EmbeddedResource Include="CadastrarCliente.resx">
+      <DependentUpon>CadastrarCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CadastrarQuarto.resx">
+      <DependentUpon>CadastrarQuarto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GerenciarCliente.resx">
+      <DependentUpon>GerenciarCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GerenciarCurso.resx">
+      <DependentUpon>GerenciarCurso.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConsultarCliente.resx">
+      <DependentUpon>ConsultarCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConsultarQuarto.resx">
+      <DependentUpon>ConsultarQuarto.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -65,7 +117,11 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="TelaPrincipal.resx">
+      <DependentUpon>TelaPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -78,6 +134,16 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Controllers\Controllers.csproj">
+      <Project>{1c964244-5716-4944-9619-f0d5df9dc956}</Project>
+      <Name>Controllers</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Models\Models.csproj">
+      <Project>{ab81133a-e699-4f1e-a2e3-912883d91a88}</Project>
+      <Name>Models</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
