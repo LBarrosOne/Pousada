@@ -7,7 +7,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Controllers;
 
 namespace Views
 {
@@ -30,9 +29,7 @@ namespace Views
 
         private void CarregarGridViewCursos()
         {
-            dgvCursos.DataSource = null;
-            CursosController cursoController = new CursosController();
-            dgvCursos.DataSource = cursoController.Listar();
+            
         }
 
         private void dgvCursos_SelectionChanged(object sender, EventArgs e)

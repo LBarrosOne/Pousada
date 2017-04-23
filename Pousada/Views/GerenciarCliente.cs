@@ -7,7 +7,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Controllers;
 using Models;
 
 namespace Views
@@ -41,19 +40,7 @@ namespace Views
             string mensagem = "";
             try
             {
-                if (Validar())
-                {
-                    AlunosController alunoController = new AlunosController();
-                    mensagem = alunoController.Editar(Int32.Parse(txtId.Text), txtNome.Text, txtCpf.Text);
-                    MessageBox.Show(mensagem);
-                    LimparCampos();
-
-
-                }
-                else
-                {
-                    MessageBox.Show("Todos campos são obrigatórios");
-                }
+                
             }
             catch (Exception ex)
             {

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,7 @@ namespace Views
         public TelaPrincipal()
         {
             InitializeComponent();
+            //Contexto contexto = new Contexto();
             
         }
 
@@ -27,9 +29,9 @@ namespace Views
 
         private void listagemToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            ConsultarCliente listagem = new ConsultarCliente();
-            listagem.MdiParent = this;
-            listagem.Show();
+            CadastrarCliente cadastro = new CadastrarCliente(null);
+            cadastro.MdiParent = this;
+            cadastro.Show();
         }
 
         private void toolStripStatusLabel1_Click(object sender, EventArgs e)
@@ -68,9 +70,7 @@ namespace Views
 
         private void editarToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            GerenciarCurso edCurso = new GerenciarCurso(null);
-            edCurso.MdiParent = this;
-            edCurso.Show();
+            
         }
 
         private void editarToolStripMenuItem1_Click(object sender, EventArgs e)

@@ -1,5 +1,4 @@
-﻿using Controllers;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -25,9 +24,7 @@ namespace Views
 
         private void CarregarGridViewClientes()
         {
-            dgvClientes.DataSource = null;
-            AlunosController alunoController = new AlunosController();
-            dgvClientes.DataSource = alunoController.Listar();
+            
         }
 
         private void dgvClientes_CellContentClick(object sender, DataGridViewCellEventArgs e)

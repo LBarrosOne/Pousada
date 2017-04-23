@@ -7,7 +7,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Controllers;
 using Models;
 
 namespace Views
@@ -34,16 +33,7 @@ namespace Views
         {
             if (CursoID.HasValue)
             {
-                CursosController cursosController = new CursosController();
-                _Curso = cursosController.Detalhes(CursoID.Value);
-
-                if (_Curso != null)
-                {
-                    txtCodigo.Text = _Curso.Codigo;
-                    txtNome.Text = _Curso.Nome;
-                    txtDescricao.Text = _Curso.Descricao;
-                    btnSalvar.Text = "Atualizar";
-                }
+                
             }
             else
                 LimparCampos();
@@ -60,23 +50,7 @@ namespace Views
             {
                 if (Validar())
                 {
-                    if (CursoID.HasValue)
-                    {
-                        CursosController cursoController = new CursosController();
-                        cursoController.Editar(CursoID.Value, txtCodigo.Text, txtDescricao.Text, txtNome.Text);
-
-                        MessageBox.Show("Curso alterado com sucesso");
-                        LimparCampos();
-                        this.Close();
-                    }
-                    else
-                    {
-                        CursosController cursoController = new CursosController();
-                        cursoController.Adicionar(txtCodigo.Text, txtDescricao.Text, txtNome.Text);
-
-                        MessageBox.Show("Curso cadastrado com sucesso");
-                        LimparCampos();
-                    }
+                   
                 }
                 else
                 {
