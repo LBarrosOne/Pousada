@@ -15,5 +15,9 @@ namespace Models.DAL
         }
 
         public DbSet<Cliente> Clientes { get; set; }
+        public DbSet<Quarto> Quartos { get; set; }
+        public DbSet<Operador> Operadores { get; set; }
+        public DbSet<Reserva> Reservas { get; set; }
+
     }
 }

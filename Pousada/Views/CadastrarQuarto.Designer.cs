@@ -28,99 +28,123 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.lblNome = new System.Windows.Forms.Label();
-            this.lblCodigo = new System.Windows.Forms.Label();
+            this.lblCategoria = new System.Windows.Forms.Label();
+            this.lblNumero = new System.Windows.Forms.Label();
             this.btnSalvar = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
-            this.txtNome = new System.Windows.Forms.TextBox();
-            this.txtCodigo = new System.Windows.Forms.TextBox();
-            this.lblDescricao = new System.Windows.Forms.Label();
-            this.txtDescricao = new System.Windows.Forms.TextBox();
+            this.txtCategoria = new System.Windows.Forms.TextBox();
+            this.txtNumero = new System.Windows.Forms.TextBox();
+            this.lblCapacidade = new System.Windows.Forms.Label();
+            this.txtCapacidade = new System.Windows.Forms.TextBox();
+            this.lblValorDiaria = new System.Windows.Forms.Label();
+            this.txtValorDiaria = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
-            // lblNome
+            // lblCategoria
             // 
-            this.lblNome.AutoSize = true;
-            this.lblNome.Location = new System.Drawing.Point(25, 46);
-            this.lblNome.Name = "lblNome";
-            this.lblNome.Size = new System.Drawing.Size(38, 13);
-            this.lblNome.TabIndex = 11;
-            this.lblNome.Text = "Nome:";
+            this.lblCategoria.AutoSize = true;
+            this.lblCategoria.Location = new System.Drawing.Point(25, 46);
+            this.lblCategoria.Name = "lblCategoria";
+            this.lblCategoria.Size = new System.Drawing.Size(55, 13);
+            this.lblCategoria.TabIndex = 11;
+            this.lblCategoria.Text = "Categoria:";
             // 
-            // lblCodigo
+            // lblNumero
             // 
-            this.lblCodigo.AutoSize = true;
-            this.lblCodigo.Location = new System.Drawing.Point(25, 19);
-            this.lblCodigo.Name = "lblCodigo";
-            this.lblCodigo.Size = new System.Drawing.Size(40, 13);
-            this.lblCodigo.TabIndex = 10;
-            this.lblCodigo.Text = "Código";
+            this.lblNumero.AutoSize = true;
+            this.lblNumero.Location = new System.Drawing.Point(25, 19);
+            this.lblNumero.Name = "lblNumero";
+            this.lblNumero.Size = new System.Drawing.Size(47, 13);
+            this.lblNumero.TabIndex = 10;
+            this.lblNumero.Text = "Número:";
             // 
             // btnSalvar
             // 
-            this.btnSalvar.Location = new System.Drawing.Point(181, 100);
+            this.btnSalvar.Location = new System.Drawing.Point(292, 132);
             this.btnSalvar.Name = "btnSalvar";
             this.btnSalvar.Size = new System.Drawing.Size(75, 23);
-            this.btnSalvar.TabIndex = 9;
+            this.btnSalvar.TabIndex = 5;
             this.btnSalvar.Text = "Salvar";
             this.btnSalvar.UseVisualStyleBackColor = true;
             this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
             // 
             // btnCancelar
             // 
-            this.btnCancelar.Location = new System.Drawing.Point(262, 101);
+            this.btnCancelar.Location = new System.Drawing.Point(211, 132);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(75, 23);
-            this.btnCancelar.TabIndex = 8;
+            this.btnCancelar.TabIndex = 6;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
-            // txtNome
+            // txtCategoria
             // 
-            this.txtNome.Location = new System.Drawing.Point(87, 39);
-            this.txtNome.Name = "txtNome";
-            this.txtNome.Size = new System.Drawing.Size(250, 20);
-            this.txtNome.TabIndex = 7;
+            this.txtCategoria.Location = new System.Drawing.Point(117, 39);
+            this.txtCategoria.MaxLength = 32;
+            this.txtCategoria.Name = "txtCategoria";
+            this.txtCategoria.Size = new System.Drawing.Size(169, 20);
+            this.txtCategoria.TabIndex = 2;
             // 
-            // txtCodigo
+            // txtNumero
             // 
-            this.txtCodigo.Location = new System.Drawing.Point(87, 12);
-            this.txtCodigo.Name = "txtCodigo";
-            this.txtCodigo.Size = new System.Drawing.Size(250, 20);
-            this.txtCodigo.TabIndex = 6;
+            this.txtNumero.Location = new System.Drawing.Point(117, 12);
+            this.txtNumero.MaxLength = 5;
+            this.txtNumero.Name = "txtNumero";
+            this.txtNumero.Size = new System.Drawing.Size(78, 20);
+            this.txtNumero.TabIndex = 1;
             // 
-            // lblDescricao
+            // lblCapacidade
             // 
-            this.lblDescricao.AutoSize = true;
-            this.lblDescricao.Location = new System.Drawing.Point(25, 72);
-            this.lblDescricao.Name = "lblDescricao";
-            this.lblDescricao.Size = new System.Drawing.Size(58, 13);
-            this.lblDescricao.TabIndex = 13;
-            this.lblDescricao.Text = "Descrição:";
+            this.lblCapacidade.AutoSize = true;
+            this.lblCapacidade.Location = new System.Drawing.Point(25, 72);
+            this.lblCapacidade.Name = "lblCapacidade";
+            this.lblCapacidade.Size = new System.Drawing.Size(67, 13);
+            this.lblCapacidade.TabIndex = 13;
+            this.lblCapacidade.Text = "Capacidade:";
             // 
-            // txtDescricao
+            // txtCapacidade
             // 
-            this.txtDescricao.Location = new System.Drawing.Point(87, 65);
-            this.txtDescricao.Name = "txtDescricao";
-            this.txtDescricao.Size = new System.Drawing.Size(250, 20);
-            this.txtDescricao.TabIndex = 12;
+            this.txtCapacidade.Location = new System.Drawing.Point(117, 65);
+            this.txtCapacidade.MaxLength = 2;
+            this.txtCapacidade.Name = "txtCapacidade";
+            this.txtCapacidade.Size = new System.Drawing.Size(51, 20);
+            this.txtCapacidade.TabIndex = 3;
             // 
-            // frmCadastroCurso
+            // lblValorDiaria
+            // 
+            this.lblValorDiaria.AutoSize = true;
+            this.lblValorDiaria.Location = new System.Drawing.Point(25, 98);
+            this.lblValorDiaria.Name = "lblValorDiaria";
+            this.lblValorDiaria.Size = new System.Drawing.Size(79, 13);
+            this.lblValorDiaria.TabIndex = 15;
+            this.lblValorDiaria.Text = "Valor da Diária:";
+            // 
+            // txtValorDiaria
+            // 
+            this.txtValorDiaria.Location = new System.Drawing.Point(117, 91);
+            this.txtValorDiaria.MaxLength = 6;
+            this.txtValorDiaria.Name = "txtValorDiaria";
+            this.txtValorDiaria.Size = new System.Drawing.Size(78, 20);
+            this.txtValorDiaria.TabIndex = 4;
+            // 
+            // CadastrarQuarto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(402, 146);
-            this.Controls.Add(this.lblDescricao);
-            this.Controls.Add(this.txtDescricao);
-            this.Controls.Add(this.lblNome);
-            this.Controls.Add(this.lblCodigo);
+            this.ClientSize = new System.Drawing.Size(412, 184);
+            this.Controls.Add(this.lblValorDiaria);
+            this.Controls.Add(this.txtValorDiaria);
+            this.Controls.Add(this.lblCapacidade);
+            this.Controls.Add(this.txtCapacidade);
+            this.Controls.Add(this.lblCategoria);
+            this.Controls.Add(this.lblNumero);
             this.Controls.Add(this.btnSalvar);
             this.Controls.Add(this.btnCancelar);
-            this.Controls.Add(this.txtNome);
-            this.Controls.Add(this.txtCodigo);
-            this.Name = "frmCadastroCurso";
-            this.Text = "Cadastro de Curso";
+            this.Controls.Add(this.txtCategoria);
+            this.Controls.Add(this.txtNumero);
+            this.Name = "CadastrarQuarto";
+            this.Text = "Cadastro de Quarto";
             this.Load += new System.EventHandler(this.frmCadastroCurso_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -129,13 +153,15 @@
 
         #endregion
 
-        private System.Windows.Forms.Label lblNome;
-        private System.Windows.Forms.Label lblCodigo;
+        private System.Windows.Forms.Label lblCategoria;
+        private System.Windows.Forms.Label lblNumero;
         private System.Windows.Forms.Button btnSalvar;
         private System.Windows.Forms.Button btnCancelar;
-        private System.Windows.Forms.TextBox txtNome;
-        private System.Windows.Forms.TextBox txtCodigo;
-        private System.Windows.Forms.Label lblDescricao;
-        private System.Windows.Forms.TextBox txtDescricao;
+        private System.Windows.Forms.TextBox txtCategoria;
+        private System.Windows.Forms.TextBox txtNumero;
+        private System.Windows.Forms.Label lblCapacidade;
+        private System.Windows.Forms.Label lblValorDiaria;
+        private System.Windows.Forms.TextBox txtValorDiaria;
+        public System.Windows.Forms.TextBox txtCapacidade;
     }
 }

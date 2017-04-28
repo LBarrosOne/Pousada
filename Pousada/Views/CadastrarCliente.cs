@@ -68,15 +68,26 @@ namespace Views
 
         private void Salvar()
         {
-            if (validar())
-            { 
-                ClienteController cc = new ClienteController();
-                //MessageBox.Show("Nome: " + txtNome.Text);                
-                cc.Adicionar(txtNome.Text, txtCpf.Text, tbDataNascimento.Text, tbEndereco.Text, tbBairro.Text,
-                              tbCidade.Text, tbEstado.Text, tbDDD.Text, tbTelefone.Text, tbEmail.Text);
-            } else
+            try
             {
-                MessageBox.Show("Todos campos são obrigatórios");
+                if (validar())
+                {
+                    ClienteController cc = new ClienteController();
+
+                    string mensagem = cc.Adicionar(txtNome.Text, txtCpf.Text, tbDataNascimento.Text, tbEndereco.Text, tbBairro.Text,
+                                    tbCidade.Text, tbEstado.Text, tbDDD.Text, tbTelefone.Text, tbEmail.Text, tbProfissao.Text,
+                                    tbRenda.Text);
+                    MessageBox.Show(mensagem);
+                    limpaCampos();
+                }
+                else
+                {
+                    MessageBox.Show("Todos campos são obrigatórios");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "ERRO");
             }
         }
 
@@ -86,7 +97,24 @@ namespace Views
                     string.IsNullOrEmpty(tbDataNascimento.Text) || string.IsNullOrEmpty(tbEndereco.Text) ||
                     string.IsNullOrEmpty(tbBairro.Text) || string.IsNullOrEmpty(tbEstado.Text) ||
                     string.IsNullOrEmpty(tbDDD.Text) || string.IsNullOrEmpty(tbTelefone.Text) ||
-                    string.IsNullOrEmpty(tbEmail.Text) || string.IsNullOrEmpty(tbCidade.Text));
+                    string.IsNullOrEmpty(tbEmail.Text) || string.IsNullOrEmpty(tbCidade.Text) ||
+                    string.IsNullOrEmpty(tbProfissao.Text) || string.IsNullOrEmpty(tbRenda.Text));
+        }
+
+        private void limpaCampos()
+        {
+            this.txtNome.Text = "";
+            this.txtCpf.Text = "";
+            this.tbDataNascimento.Text = "";
+            this.tbEndereco.Text = "";
+            this.tbBairro.Text = "";
+            this.tbEstado.Text = "";
+            this.tbDDD.Text = "";
+            this.tbTelefone.Text = "";
+            this.tbEmail.Text = "";
+            this.tbCidade.Text = "";
+            this.tbProfissao.Text = "";
+            this.tbRenda.Text = "";
         }
     }
 }

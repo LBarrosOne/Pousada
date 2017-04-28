@@ -51,6 +51,10 @@
             this.btnCncelar = new System.Windows.Forms.Button();
             this.tbCidade = new System.Windows.Forms.TextBox();
             this.lblCidade = new System.Windows.Forms.Label();
+            this.tbProfissao = new System.Windows.Forms.TextBox();
+            this.lblprofissao = new System.Windows.Forms.Label();
+            this.tbRenda = new System.Windows.Forms.TextBox();
+            this.lblRenda = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // txtNome
@@ -110,7 +114,7 @@
             this.tbDataNascimento.Location = new System.Drawing.Point(133, 119);
             this.tbDataNascimento.Name = "tbDataNascimento";
             this.tbDataNascimento.Size = new System.Drawing.Size(71, 20);
-            this.tbDataNascimento.TabIndex = 8;
+            this.tbDataNascimento.TabIndex = 2;
             // 
             // lblEndereco
             // 
@@ -160,7 +164,7 @@
             // lblEmail
             // 
             this.lblEmail.AutoSize = true;
-            this.lblEmail.Location = new System.Drawing.Point(13, 278);
+            this.lblEmail.Location = new System.Drawing.Point(13, 329);
             this.lblEmail.Name = "lblEmail";
             this.lblEmail.Size = new System.Drawing.Size(35, 13);
             this.lblEmail.TabIndex = 14;
@@ -171,59 +175,60 @@
             this.tbEndereco.Location = new System.Drawing.Point(133, 145);
             this.tbEndereco.Name = "tbEndereco";
             this.tbEndereco.Size = new System.Drawing.Size(373, 20);
-            this.tbEndereco.TabIndex = 15;
+            this.tbEndereco.TabIndex = 3;
             // 
             // tbBairro
             // 
             this.tbBairro.Location = new System.Drawing.Point(133, 171);
             this.tbBairro.Name = "tbBairro";
             this.tbBairro.Size = new System.Drawing.Size(198, 20);
-            this.tbBairro.TabIndex = 16;
+            this.tbBairro.TabIndex = 4;
             // 
             // tbEstado
             // 
             this.tbEstado.Location = new System.Drawing.Point(133, 223);
             this.tbEstado.Name = "tbEstado";
             this.tbEstado.Size = new System.Drawing.Size(198, 20);
-            this.tbEstado.TabIndex = 17;
+            this.tbEstado.TabIndex = 6;
             // 
             // tbDDD
             // 
             this.tbDDD.Location = new System.Drawing.Point(133, 249);
             this.tbDDD.Name = "tbDDD";
-            this.tbDDD.Size = new System.Drawing.Size(34, 20);
-            this.tbDDD.TabIndex = 18;
+            this.tbDDD.Size = new System.Drawing.Size(59, 20);
+            this.tbDDD.TabIndex = 7;
             // 
             // tbTelefone
             // 
             this.tbTelefone.Location = new System.Drawing.Point(256, 249);
             this.tbTelefone.Name = "tbTelefone";
             this.tbTelefone.Size = new System.Drawing.Size(150, 20);
-            this.tbTelefone.TabIndex = 19;
+            this.tbTelefone.TabIndex = 8;
             // 
             // tbEmail
             // 
-            this.tbEmail.Location = new System.Drawing.Point(133, 275);
+            this.tbEmail.Location = new System.Drawing.Point(133, 326);
             this.tbEmail.Name = "tbEmail";
             this.tbEmail.Size = new System.Drawing.Size(373, 20);
-            this.tbEmail.TabIndex = 20;
+            this.tbEmail.TabIndex = 11;
             // 
             // btnSalvar
             // 
-            this.btnSalvar.Location = new System.Drawing.Point(431, 312);
+            this.btnSalvar.Location = new System.Drawing.Point(431, 363);
             this.btnSalvar.Name = "btnSalvar";
             this.btnSalvar.Size = new System.Drawing.Size(75, 23);
-            this.btnSalvar.TabIndex = 21;
+            this.btnSalvar.TabIndex = 12;
+            this.btnSalvar.TabStop = false;
             this.btnSalvar.Text = "Salvar";
             this.btnSalvar.UseVisualStyleBackColor = true;
             this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click_1);
             // 
             // btnCncelar
             // 
-            this.btnCncelar.Location = new System.Drawing.Point(350, 312);
+            this.btnCncelar.Location = new System.Drawing.Point(350, 363);
             this.btnCncelar.Name = "btnCncelar";
             this.btnCncelar.Size = new System.Drawing.Size(75, 23);
-            this.btnCncelar.TabIndex = 22;
+            this.btnCncelar.TabIndex = 13;
             this.btnCncelar.Text = "Cancelar\r\n";
             this.btnCncelar.UseVisualStyleBackColor = true;
             this.btnCncelar.Click += new System.EventHandler(this.btnCncelar_Click);
@@ -233,7 +238,7 @@
             this.tbCidade.Location = new System.Drawing.Point(133, 197);
             this.tbCidade.Name = "tbCidade";
             this.tbCidade.Size = new System.Drawing.Size(373, 20);
-            this.tbCidade.TabIndex = 24;
+            this.tbCidade.TabIndex = 5;
             // 
             // lblCidade
             // 
@@ -244,11 +249,47 @@
             this.lblCidade.TabIndex = 23;
             this.lblCidade.Text = "Cidade:";
             // 
+            // tbProfissao
+            // 
+            this.tbProfissao.Location = new System.Drawing.Point(133, 275);
+            this.tbProfissao.Name = "tbProfissao";
+            this.tbProfissao.Size = new System.Drawing.Size(273, 20);
+            this.tbProfissao.TabIndex = 9;
+            // 
+            // lblprofissao
+            // 
+            this.lblprofissao.AutoSize = true;
+            this.lblprofissao.Location = new System.Drawing.Point(13, 278);
+            this.lblprofissao.Name = "lblprofissao";
+            this.lblprofissao.Size = new System.Drawing.Size(53, 13);
+            this.lblprofissao.TabIndex = 25;
+            this.lblprofissao.Text = "Profissão:";
+            // 
+            // tbRenda
+            // 
+            this.tbRenda.Location = new System.Drawing.Point(133, 301);
+            this.tbRenda.Name = "tbRenda";
+            this.tbRenda.Size = new System.Drawing.Size(81, 20);
+            this.tbRenda.TabIndex = 10;
+            // 
+            // lblRenda
+            // 
+            this.lblRenda.AutoSize = true;
+            this.lblRenda.Location = new System.Drawing.Point(13, 304);
+            this.lblRenda.Name = "lblRenda";
+            this.lblRenda.Size = new System.Drawing.Size(42, 13);
+            this.lblRenda.TabIndex = 27;
+            this.lblRenda.Text = "Renda:";
+            // 
             // CadastrarCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(545, 380);
+            this.ClientSize = new System.Drawing.Size(545, 405);
+            this.Controls.Add(this.tbRenda);
+            this.Controls.Add(this.lblRenda);
+            this.Controls.Add(this.tbProfissao);
+            this.Controls.Add(this.lblprofissao);
             this.Controls.Add(this.tbCidade);
             this.Controls.Add(this.lblCidade);
             this.Controls.Add(this.btnCncelar);
@@ -304,5 +345,9 @@
         private System.Windows.Forms.Button btnCncelar;
         private System.Windows.Forms.TextBox tbCidade;
         private System.Windows.Forms.Label lblCidade;
+        private System.Windows.Forms.TextBox tbProfissao;
+        private System.Windows.Forms.Label lblprofissao;
+        private System.Windows.Forms.TextBox tbRenda;
+        private System.Windows.Forms.Label lblRenda;
     }
 }

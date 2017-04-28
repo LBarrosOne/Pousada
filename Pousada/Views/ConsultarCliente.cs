@@ -19,6 +19,8 @@ namespace Views
 
         private void frmListagemClientes_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'pousadaDataSet2.Clientes' table. You can move, or remove it, as needed.
+            this.clientesTableAdapter.Fill(this.pousadaDataSet2.Clientes);
             CarregarGridViewClientes();
         }
 

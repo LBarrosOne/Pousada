@@ -28,90 +28,149 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.lblListaCursos = new System.Windows.Forms.Label();
-            this.dgvCursos = new System.Windows.Forms.DataGridView();
-            this.CursoID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Código = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Nome = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Descrição = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvCursos)).BeginInit();
+            this.components = new System.ComponentModel.Container();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.pousadaDataSet = new Views.PousadaDataSet();
+            this.quartosBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.quartosTableAdapter = new Views.PousadaDataSetTableAdapters.QuartosTableAdapter();
+            this.pousadaDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.pousadaDataSet1 = new Views.PousadaDataSet1();
+            this.quartosBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.quartosTableAdapter1 = new Views.PousadaDataSet1TableAdapters.QuartosTableAdapter();
+            this.quartoIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.numeroDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.categoriaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.capacidadeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.valorDiariaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pousadaDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.quartosBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pousadaDataSetBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pousadaDataSet1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.quartosBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
-            // lblListaCursos
+            // dataGridView1
             // 
-            this.lblListaCursos.AutoSize = true;
-            this.lblListaCursos.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblListaCursos.Location = new System.Drawing.Point(12, 9);
-            this.lblListaCursos.Name = "lblListaCursos";
-            this.lblListaCursos.Size = new System.Drawing.Size(224, 25);
-            this.lblListaCursos.TabIndex = 2;
-            this.lblListaCursos.Text = "Lista de Clientes Cursos";
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.AutoGenerateColumns = false;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.quartoIDDataGridViewTextBoxColumn,
+            this.numeroDataGridViewTextBoxColumn,
+            this.categoriaDataGridViewTextBoxColumn,
+            this.capacidadeDataGridViewTextBoxColumn,
+            this.valorDiariaDataGridViewTextBoxColumn});
+            this.dataGridView1.DataSource = this.quartosBindingSource1;
+            this.dataGridView1.Location = new System.Drawing.Point(12, 12);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.Size = new System.Drawing.Size(543, 221);
+            this.dataGridView1.TabIndex = 0;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
-            // dgvCursos
+            // pousadaDataSet
             // 
-            this.dgvCursos.AllowUserToAddRows = false;
-            this.dgvCursos.AllowUserToDeleteRows = false;
-            this.dgvCursos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvCursos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.CursoID,
-            this.Código,
-            this.Nome,
-            this.Descrição});
-            this.dgvCursos.Location = new System.Drawing.Point(17, 37);
-            this.dgvCursos.Name = "dgvCursos";
-            this.dgvCursos.Size = new System.Drawing.Size(608, 212);
-            this.dgvCursos.TabIndex = 3;
-            this.dgvCursos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvClientes_CellContentClick);
+            this.pousadaDataSet.DataSetName = "PousadaDataSet";
+            this.pousadaDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // CursoID
+            // quartosBindingSource
             // 
-            this.CursoID.DataPropertyName = "CursoID";
-            this.CursoID.HeaderText = "ID";
-            this.CursoID.Name = "CursoID";
-            this.CursoID.ReadOnly = true;
+            this.quartosBindingSource.DataMember = "Quartos";
+            this.quartosBindingSource.DataSource = this.pousadaDataSet;
             // 
-            // Código
+            // quartosTableAdapter
             // 
-            this.Código.DataPropertyName = "codigo";
-            this.Código.HeaderText = "Código";
-            this.Código.Name = "Código";
+            this.quartosTableAdapter.ClearBeforeFill = true;
             // 
-            // Nome
+            // pousadaDataSetBindingSource
             // 
-            this.Nome.DataPropertyName = "nome";
-            this.Nome.HeaderText = "Nome";
-            this.Nome.Name = "Nome";
+            this.pousadaDataSetBindingSource.DataSource = this.pousadaDataSet;
+            this.pousadaDataSetBindingSource.Position = 0;
             // 
-            // Descrição
+            // pousadaDataSet1
             // 
-            this.Descrição.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Descrição.DataPropertyName = "descricao";
-            this.Descrição.HeaderText = "Descrição";
-            this.Descrição.Name = "Descrição";
+            this.pousadaDataSet1.DataSetName = "PousadaDataSet1";
+            this.pousadaDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // frmListagemCursos
+            // quartosBindingSource1
+            // 
+            this.quartosBindingSource1.DataMember = "Quartos";
+            this.quartosBindingSource1.DataSource = this.pousadaDataSet1;
+            // 
+            // quartosTableAdapter1
+            // 
+            this.quartosTableAdapter1.ClearBeforeFill = true;
+            // 
+            // quartoIDDataGridViewTextBoxColumn
+            // 
+            this.quartoIDDataGridViewTextBoxColumn.DataPropertyName = "QuartoID";
+            this.quartoIDDataGridViewTextBoxColumn.HeaderText = "QuartoID";
+            this.quartoIDDataGridViewTextBoxColumn.Name = "quartoIDDataGridViewTextBoxColumn";
+            this.quartoIDDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // numeroDataGridViewTextBoxColumn
+            // 
+            this.numeroDataGridViewTextBoxColumn.DataPropertyName = "Numero";
+            this.numeroDataGridViewTextBoxColumn.HeaderText = "Numero";
+            this.numeroDataGridViewTextBoxColumn.Name = "numeroDataGridViewTextBoxColumn";
+            this.numeroDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // categoriaDataGridViewTextBoxColumn
+            // 
+            this.categoriaDataGridViewTextBoxColumn.DataPropertyName = "Categoria";
+            this.categoriaDataGridViewTextBoxColumn.HeaderText = "Categoria";
+            this.categoriaDataGridViewTextBoxColumn.Name = "categoriaDataGridViewTextBoxColumn";
+            this.categoriaDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // capacidadeDataGridViewTextBoxColumn
+            // 
+            this.capacidadeDataGridViewTextBoxColumn.DataPropertyName = "Capacidade";
+            this.capacidadeDataGridViewTextBoxColumn.HeaderText = "Capacidade";
+            this.capacidadeDataGridViewTextBoxColumn.Name = "capacidadeDataGridViewTextBoxColumn";
+            this.capacidadeDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // valorDiariaDataGridViewTextBoxColumn
+            // 
+            this.valorDiariaDataGridViewTextBoxColumn.DataPropertyName = "ValorDiaria";
+            this.valorDiariaDataGridViewTextBoxColumn.HeaderText = "ValorDiaria";
+            this.valorDiariaDataGridViewTextBoxColumn.Name = "valorDiariaDataGridViewTextBoxColumn";
+            this.valorDiariaDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // ConsultarQuarto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(637, 280);
-            this.Controls.Add(this.dgvCursos);
-            this.Controls.Add(this.lblListaCursos);
-            this.Name = "frmListagemCursos";
-            this.Text = "Lista de Cursos";
+            this.ClientSize = new System.Drawing.Size(582, 245);
+            this.Controls.Add(this.dataGridView1);
+            this.Name = "ConsultarQuarto";
+            this.Text = "Consultar Quartos";
             this.Load += new System.EventHandler(this.frmListagemCursos_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvCursos)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pousadaDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.quartosBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pousadaDataSetBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pousadaDataSet1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.quartosBindingSource1)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Label lblListaCursos;
-        private System.Windows.Forms.DataGridView dgvCursos;
-        private System.Windows.Forms.DataGridViewTextBoxColumn CursoID;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Código;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Nome;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Descrição;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private PousadaDataSet pousadaDataSet;
+        private System.Windows.Forms.BindingSource quartosBindingSource;
+        private PousadaDataSetTableAdapters.QuartosTableAdapter quartosTableAdapter;
+        private System.Windows.Forms.BindingSource pousadaDataSetBindingSource;
+        private PousadaDataSet1 pousadaDataSet1;
+        private System.Windows.Forms.BindingSource quartosBindingSource1;
+        private PousadaDataSet1TableAdapters.QuartosTableAdapter quartosTableAdapter1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn quartoIDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn numeroDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn categoriaDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn capacidadeDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn valorDiariaDataGridViewTextBoxColumn;
     }
 }

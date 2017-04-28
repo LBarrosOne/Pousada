@@ -62,17 +62,47 @@
     <Compile Include="CadastrarCliente.Designer.cs">
       <DependentUpon>CadastrarCliente.cs</DependentUpon>
     </Compile>
+    <Compile Include="CadastrarReserva.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CadastrarReserva.Designer.cs">
+      <DependentUpon>CadastrarReserva.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConsultarReserva.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConsultarReserva.Designer.cs">
+      <DependentUpon>ConsultarReserva.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EditarQuarto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditarQuarto.Designer.cs">
+      <DependentUpon>EditarQuarto.cs</DependentUpon>
+    </Compile>
     <Compile Include="CadastrarQuarto.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="CadastrarQuarto.Designer.cs">
       <DependentUpon>CadastrarQuarto.cs</DependentUpon>
     </Compile>
-    <Compile Include="GerenciarCliente.cs">
+    <Compile Include="ExcluirCliente.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GerenciarCliente.Designer.cs">
-      <DependentUpon>GerenciarCliente.cs</DependentUpon>
+    <Compile Include="ExcluirCliente.Designer.cs">
+      <DependentUpon>ExcluirCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExcluirQuarto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ExcluirQuarto.Designer.cs">
+      <DependentUpon>ExcluirQuarto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EditarCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditarCliente.Designer.cs">
+      <DependentUpon>EditarCliente.cs</DependentUpon>
     </Compile>
     <Compile Include="ConsultarCliente.cs">
       <SubType>Form</SubType>
@@ -86,6 +116,37 @@
     <Compile Include="ConsultarQuarto.Designer.cs">
       <DependentUpon>ConsultarQuarto.cs</DependentUpon>
     </Compile>
+    <Compile Include="ExcluirReserva.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ExcluirReserva.Designer.cs">
+      <DependentUpon>ExcluirReserva.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PousadaDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PousadaDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="PousadaDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PousadaDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="PousadaDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PousadaDataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="PousadaDataSet3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PousadaDataSet3.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="PousadaDataSet4.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PousadaDataSet4.xsd</DependentUpon>
+    </Compile>
     <Compile Include="TelaPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -97,17 +158,35 @@
     <EmbeddedResource Include="CadastrarCliente.resx">
       <DependentUpon>CadastrarCliente.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="CadastrarReserva.resx">
+      <DependentUpon>CadastrarReserva.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConsultarReserva.resx">
+      <DependentUpon>ConsultarReserva.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditarQuarto.resx">
+      <DependentUpon>EditarQuarto.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CadastrarQuarto.resx">
       <DependentUpon>CadastrarQuarto.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GerenciarCliente.resx">
-      <DependentUpon>GerenciarCliente.cs</DependentUpon>
+    <EmbeddedResource Include="ExcluirCliente.resx">
+      <DependentUpon>ExcluirCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExcluirQuarto.resx">
+      <DependentUpon>ExcluirQuarto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditarCliente.resx">
+      <DependentUpon>EditarCliente.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ConsultarCliente.resx">
       <DependentUpon>ConsultarCliente.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ConsultarQuarto.resx">
       <DependentUpon>ConsultarQuarto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExcluirReserva.resx">
+      <DependentUpon>ExcluirReserva.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -123,6 +202,61 @@
       <DependentUpon>TelaPrincipal.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
+    <None Include="PousadaDataSet.xsc">
+      <DependentUpon>PousadaDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="PousadaDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>PousadaDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="PousadaDataSet.xss">
+      <DependentUpon>PousadaDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="PousadaDataSet1.xsc">
+      <DependentUpon>PousadaDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="PousadaDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>PousadaDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="PousadaDataSet1.xss">
+      <DependentUpon>PousadaDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="PousadaDataSet2.xsc">
+      <DependentUpon>PousadaDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="PousadaDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>PousadaDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="PousadaDataSet2.xss">
+      <DependentUpon>PousadaDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="PousadaDataSet3.xsc">
+      <DependentUpon>PousadaDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="PousadaDataSet3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>PousadaDataSet3.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="PousadaDataSet3.xss">
+      <DependentUpon>PousadaDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="PousadaDataSet4.xsc">
+      <DependentUpon>PousadaDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="PousadaDataSet4.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>PousadaDataSet4.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="PousadaDataSet4.xss">
+      <DependentUpon>PousadaDataSet4.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

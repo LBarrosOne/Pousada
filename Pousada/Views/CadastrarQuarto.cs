@@ -8,35 +8,24 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Models;
+using Controllers;
 
 namespace Views
 {
     public partial class CadastrarQuarto : Form
     {
-        public int? CursoID { get; set; }
-        public Curso _Curso { get; set; }
+        //public int? CursoID { get; set; }
+        
 
-        public CadastrarQuarto(int? idCurso)
+        public CadastrarQuarto()
         {
             InitializeComponent();
-
-            if (idCurso.HasValue)
-                CursoID = idCurso;
+            
         }
 
         private void frmCadastroCurso_Load(object sender, EventArgs e)
         {
-            CarregarFormulario();
-        }
-
-        private void CarregarFormulario()
-        {
-            if (CursoID.HasValue)
-            {
-                
-            }
-            else
-                LimparCampos();
+           
         }
 
         private void btnSalvar_Click(object sender, EventArgs e)
@@ -50,7 +39,10 @@ namespace Views
             {
                 if (Validar())
                 {
-                   
+                    QuartoController qc = new QuartoController();
+                    qc.cadastrar(txtNumero.Text, txtCategoria.Text, txtCapacidade.Text, txtValorDiaria.Text);
+                    MessageBox.Show("Quarto cadastrado com sucesso.");
+                    limpaCampos();
                 }
                 else
                 {
@@ -65,7 +57,8 @@ namespace Views
 
         private bool Validar()
         {
-            return !(string.IsNullOrEmpty(txtCodigo.Text) || string.IsNullOrEmpty(txtNome.Text));
+            return !(string.IsNullOrEmpty(txtNumero.Text) || string.IsNullOrEmpty(txtCapacidade.Text) ||
+                     string.IsNullOrEmpty(txtCategoria.Text) || string.IsNullOrEmpty(txtValorDiaria.Text));
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)
@@ -73,14 +66,12 @@ namespace Views
             this.Close();
         }
 
-        public void LimparCampos()
+        private void limpaCampos()
         {
-            CursoID = null;
-            _Curso = null;
-            txtCodigo.Clear();
-            txtNome.Clear();
-            txtDescricao.Clear();
-            btnSalvar.Text = "Salvar";
+            this.txtNumero.Text = "";
+            this.txtCategoria.Text = "";
+            this.txtCapacidade.Text = "";
+            this.txtValorDiaria.Text = "";
         }
     }
 }

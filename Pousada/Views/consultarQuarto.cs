@@ -24,6 +24,9 @@ namespace Views
 
         private void frmListagemCursos_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'pousadaDataSet1.Quartos' table. You can move, or remove it, as needed.
+            this.quartosTableAdapter1.Fill(this.pousadaDataSet1.Quartos);
+            
             CarregarGridViewCursos();
         }
 
@@ -38,5 +41,9 @@ namespace Views
 
         }
 
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }
